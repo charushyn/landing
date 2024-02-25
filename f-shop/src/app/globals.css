@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    
+  }
+}
+
+body {
+  
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.greeting{
+  height: 100svh;
+  background: rgba(0, 0, 0, 0.8)url('https://image.made-in-china.com/202f0j00MJmVIrbRfPoh/Portable-Thermal-Printer-Mini-Cat-Print-Photo-Pocket-Thermal-Label-Printer-58mm-Printing-Wireless-Bluetooth-Android-Ios-Printers.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 16px 0px 16px;
+  background-blend-mode: darken;
+
+}
+.scrolling-text-container {
+  background-color: red;
+  color: white;
+  height: 60px;
+  line-height: 45px;
+  overflow: hidden;
+}
+
+/* Inner container styles */
+.scrolling-text-inner {
+  display: flex;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 0;
+}
+
+/* Text styles */
+.scrolling-text {
+  display: flex;
+}
+
+.scrolling-text-item {
+  padding: 0 30px;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div {
+  animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner>div {
+  animation-play-state: paused;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+  0% {
+      transform: translateX(0%);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+      transform: translateX(-100%);
+  }
+
+  100% {
+      transform: translateX(0%);
+  }
+}
+
+/* h-svh bg-[url('https://a.allegroimg.com/s512/11dd8d/e6bb6ee642dd8e6bb143455f4277/Starry-Sky-Projector-Led-Astronaut-Night-Light-Kolor-inny')] bg-no-repeat bg-cover flex flex-col pt-[60px] */
