@@ -14,7 +14,6 @@ export default function Slider(props){
         currentCount == 0 ? useCount(photoes.length - 1) : useCount(currentCount - 1)
     }
 
-
     return(
         <div class='flex flex-col gap-2'>
             <div class='flex flex-row items-center gap-2'>

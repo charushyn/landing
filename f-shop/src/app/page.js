@@ -8,6 +8,7 @@ import BlockWithVideo from "./Components/BlockWithVideo";
 import FAQ from "./Components/FAQ";
 import StepsOrder from "./Components/StepsOfOrder";
 import Footer from "./Components/Footer";
+import Products from "./Components/Products";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <BlockWithVideo></BlockWithVideo>
       <FAQ></FAQ>
       <StepsOrder></StepsOrder>
+      <Products></Products>
       <Footer></Footer>
     </div>
   );
