@@ -45,9 +45,20 @@ export const basketSlice = createSlice({
                 return{
                     items: previousBasket
                 }
+        },
+        decrementProduct: (state, action) => {
+            const previousBasket = JSON.parse(JSON.stringify(current(state.items)))
+            const index = previousBasket.findIndex((product) => product.id === action.payload.id)
+
+
+            previousBasket[index].count === 1 ? previousBasket.splice(index, 1) :
+            previousBasket[index].count = previousBasket[index].count - 1
+                return{
+                    items: previousBasket
+                }
         }
     }
 })
 
-export const { addProduct, removeProduct, incrimentProduct } = basketSlice.actions;
+export const { addProduct, removeProduct, incrimentProduct, decrementProduct } = basketSlice.actions;
 export default basketSlice.reducer;

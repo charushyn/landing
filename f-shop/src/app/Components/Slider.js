@@ -15,22 +15,22 @@ export default function Slider(props){
     }
 
     return(
-        <div class='flex flex-col gap-2'>
+        <div class='flex flex-col gap-2 items-center tablet-m:gap-5 tablet-l:mt-5'>
             <div class='flex flex-row items-center gap-2'>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7  bg-white border-[1px] border-black rounded-lg" onClick={() => previousPhoto(count)}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5  bg-white border-[1px] border-black rounded-lg tablet-m:w-[70px] tablet-m:h-[50px] desktop:w-[50px] desktop:h-[40px]" onClick={() => previousPhoto(count)}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
-                {<img class='mobile-s:w-[230px] mobile-s:h-[400px] object-contain' src={photoes[count]}></img>}
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7  bg-white border-black border-[1px] rounded-lg" onClick={() => nextPhoto(count)}>
+                {<img class='mobile-s:w-[200px] mobile-s:h-[300px] object-contain tablet-m:w-full tablet-m:h-[600px] tablet-l:h-[800px] desktop:h-[500px] desktop:w-[400px]' src={photoes[count]}></img>}
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5  bg-white border-black border-[1px] rounded-lg tablet-m:w-[70px] tablet-m:h-[50px] desktop:w-[50px] desktop:h-[40px]" onClick={() => nextPhoto(count)}>
                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
             </div>
-            <div class='flex flex-row flex-wrap justify-center gap-2'>
+            <div class=' mobile-s:gap-1 flex flex-row flex-wrap justify-center tablet-m:gap-3'>
                 {photoes.map((item) => {
                     if(item == photoes[count]){
-                        return(<img src={item} class='mobile-s:w-12 mobile-s:h-12 border-red-500 border-2'></img>)
+                        return(<img src={item} class='mobile-s:w-[40px] mobile-s:h-[40px] border-red-500 border-2 tablet-m:w-[100px] tablet-m:h-[100px] desktop:w-[70px] desktop:h-[70px]'></img>)
                     } else {
-                        return(<img src={item} class='mobile-s:w-10 mobile-s:h-10 border-black border-2' onClick={() => {
+                        return(<img src={item} class='mobile-s:w-[35px] mobile-s:h-[35px] border-black border-2 tablet-m:w-[90px] tablet-m:h-[90px] desktop:w-[65px] desktop:h-[65px]' onClick={() => {
                             useCount(photoes.findIndex((photo) => photo == item))
                         }}></img>)
                     }

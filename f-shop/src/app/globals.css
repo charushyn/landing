@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "productSans";
+  src: url("../app/fonts/productsans.ttf");
+}
+
 :root {
   
 }
@@ -32,23 +37,48 @@ body {
   flex-direction: column;
   padding: 100px 16px 0px 16px;
   background-blend-mode: darken;
+  @media screen and (min-width: 411px) {
+    justify-content: center;
+    padding: 0px 24px 0px 24px;
+  }
+  @media screen and (min-width: 767px) {
+    padding: 0px 24px 0px 24px;
+  }
+  @media screen and (min-width: 1023px) {
+    justify-content: center;
+    padding: 0px 24px 0px 24px;
+  }
 
 }
 .scrolling-text-container {
   background-color: red;
   color: white;
-  height: 60px;
-  line-height: 45px;
+  height: 80px;
+  line-height: 60px;
   overflow: hidden;
+  @media screen and (min-width: 767px) {
+    height: 120px;
+    line-height: 100px;
+  }
+  @media screen and (min-width: 1023px) {
+    height: 60px;
+    line-height: 45px;
+  }
 }
 
 /* Inner container styles */
 .scrolling-text-inner {
   display: flex;
   white-space: nowrap;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   padding: 8px 0;
+  @media screen and (min-width: 767px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 1023px) {
+    font-size: 18px;
+  }
 }
 
 /* Text styles */

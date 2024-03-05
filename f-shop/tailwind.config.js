@@ -20,6 +20,12 @@ module.exports = {
         "tablet-l": '1023px',
         "desktop": '1279px',
       },
+      fontFamily: {
+        productSans: ['productSans', "sans-serif"]
+      },
+      backgroundImage: {
+        'logo': "url('./img/logo.png')"
+      }
     },
   },
   plugins: [],

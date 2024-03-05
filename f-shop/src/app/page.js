@@ -12,7 +12,7 @@ import Products from "./Components/Products";
 
 export default function Home() {
   return (
-    <div class=' bg-gray-100'>
+    <div class=' bg-gray-100 font-productSans'>
       <Header></Header>
       <Greeting></Greeting>
       <InfinityString></InfinityString>

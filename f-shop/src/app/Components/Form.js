@@ -100,7 +100,7 @@ export default function Form(){
 
 
     return(
-        <form class='mobile-s:flex mobile-s:flex-col mobile-s:gap-3' onSubmit={() => sendData()}>
+        <form class='mobile-s:flex mobile-s:flex-col mobile-s:gap-3 desktop:mt-[80px]' onSubmit={() => sendData()}>
             {inputs.map((input) => {
                 return(
                     <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange}></FormInput>
