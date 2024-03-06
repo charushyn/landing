@@ -6,6 +6,7 @@ import FormInput from "../UI/FormInput";
 import Button from "../UI/Button";
 
 import { useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
 
 let bot = {
     TOKEN: '6415873297:AAEdCF0TIYxXUIaiBeXCWQ_0KAB12PtP0nE',
@@ -79,6 +80,7 @@ export default function Form(){
             pattern: "^[0-9]{1,3}$",
         },
     ]
+    const router = useRouter()
 
 
     function onChange(e){
@@ -93,21 +95,21 @@ export default function Form(){
 
         fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${message}`)
         
-
+        router.push('/basket/form/success')
     }
 
     console.log(values)
 
 
     return(
-        <form class='mobile-s:flex mobile-s:flex-col mobile-s:gap-3 desktop:mt-[80px]' onSubmit={() => sendData()}>
+        <form class='mobile-s:flex mobile-s:flex-col mobile-s:gap-3 tablet-l:mt-[80px]' onSubmit={sendData}>
             {inputs.map((input) => {
                 return(
                     <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange}></FormInput>
                 )
             })}
             <div class='mobile-s:my-4'>
-                <Button onClick={sendData} text={'Замовити'}></Button>
+                <button class='bg-purple-600 text-white uppercase mobile-s:px-4 mobile-s:py-3 mobile-l:text-xl mobile-l:px-6 mobile-l:py-3 tablet-m:text-3xl tablet-m:py-7 desktop:py-3 desktop:text-xl' type='submit'>Надіслати</button>
                 
             </div>
         </form>

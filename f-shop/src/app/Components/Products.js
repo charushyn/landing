@@ -11,13 +11,13 @@ export default function Products(){
     const dispatch = useDispatch()
 
     return(
-        <div class='h-fit mobile-s:px-[16px] my-6 mobile-s:flex mobile-s:flex-col mobile-s:gap-4'>
+        <div class='h-fit mobile-s:px-[16px] my-6 mobile-s:flex mobile-s:flex-col mobile-s:gap-4' name="products">
             <p class='mobile-s:text-2xl text-center tablet-m:text-6xl tablet-m:py-5'>Усі продукти</p>
             <div class='mobile-s:gap-4 mobile-s:flex mobile-s:flex-col tablet-m:justify-center tablet-l:flex-row tablet-l:flex-wrap'>
             {
                 products.map((item) => {
                     return(
-                        <div id={item.id} class='flex flex-col gap-2 h-fit bg-white p-2 relative tablet-l:gap-5 tablet-m:p-5 tablet-l:w-[45%] tablet-m:gap-4 desktop:w-[23%] desktop:min-h-[600px]'>
+                        <div id={item.id} key={item.id} class='flex flex-col gap-2 h-fit bg-white p-2 relative tablet-l:gap-5 tablet-m:p-5 tablet-l:w-[45%] tablet-m:gap-4 desktop:w-[23%] desktop:min-h-[600px]'>
                             <img src={item.urlPhoto} class='mobile-s:w-full mobile-s:h-[250px] mobile-s:object-cover tablet-m:h-[400px] desktop:h-[240px] '></img>
                             <p class='text-xl mobile-l:text-2xl tablet-m:text-5xl desktop:text-2xl'>{item.name}</p>
                             {

@@ -1,14 +1,17 @@
+'use client'
+
 import photoes from "../data/photoes"
 import React from "react"
 import Slider from "./Slider"
 import product from "../data/product"
 import Button from "../UI/Button"
+import { Link } from "react-scroll"
 
 export default function SecondBlock(props){
     return(
-        <div class='px-[16px] mobile-s:flex mobile-s:flex-col desktop:flex-row desktop:gap-5'>
+        <div class='px-[16px] mobile-s:flex mobile-s:flex-col desktop:flex-row desktop:justify-between'>
             <Slider></Slider>
-            <div class='flex flex-col mobile-s:my-4'>
+            <div class='flex flex-col mobile-s:my-4 desktop:max-w-[60%] '>
                 <h1 class='mobile-s:text-2xl mobile-m:text-3xl tablet-m:text-5xl tablet-l:text-6xl desktop:text-5xl'>{product.name}</h1>
                 <p class='mobile-s:text-xl mobile-m:text-2xl text-red-600 mt-2 tablet-m:text-5xl desktop:text-4xl'>{product.currentPrice}{product.currency}</p>
                 <p class='mobile-s:text-xl mobile-m:text-2xl tablet-m:text-4xl text-gray-500 line-through'>{product.previousPrice}{product.currency}</p>
@@ -18,7 +21,7 @@ export default function SecondBlock(props){
                             <div class='flex flex-row' key={item}>
                                 <p class='font-bold mobile-m:text-xl tablet-m:text-4xl tablet-l:text-4xl desktop:text-2xl'>{item.title}</p>
                                 <p class='tablet-m:text-3xl mobile-m:text-xl tablet-l:text-4xl desktop:text-2xl'>:</p>
-                                <p class=' pl-2 mobile-m:text-xl  tablet-m:text-3xl tablet-m:mt-1 tablet-l:text-4xl desktop:text-2xl'>{item.text}</p>
+                                <p class=' pl-2 mobile-m:text-xl  tablet-m:text-3xl tablet-m:mt-1 tablet-l:text-4xl desktop:text-2xl desktop:mt-0'>{item.text}</p>
                             </div>
                         )
                         })}
@@ -41,7 +44,7 @@ export default function SecondBlock(props){
                     </svg>
                     <p class=' pl-2 mobile-m:text-xl tablet-m:text-3xl desktop:text-xl desktop:mt-2'>(99+)</p>
                 </div>
-                <Button text={'Оформити замовлення'}></Button>
+                        <Link to="products" duration={500} smooth={true} class='bg-purple-600 text-white uppercase mobile-s:px-4 mobile-s:py-3 mobile-l:text-xl mobile-l:px-6 mobile-l:py-3 tablet-m:text-3xl tablet-m:py-7 desktop:py-3 desktop:text-xl text-center cursor-pointer'>оформити замовлення</Link>
             </div>
         </div>
     )

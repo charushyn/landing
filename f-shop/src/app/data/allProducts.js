@@ -14,9 +14,12 @@ class Product {
 
 const products = []
 
-products.push(new Product('Принтер Жовтий', false, 1099, 699, 100, 1, 1, 'https://images.unsplash.com/photo-1481349518771-20055b2a7b24?q=80&w=2739&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'))
-products.push(new Product('Принтер Blue', false, 1099, 799, 100, 1, 2, 'https://images.unsplash.com/photo-1493612276216-ee3925520721?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'))
-products.push(new Product('Paper 3x default', true, 1099, 799, 100, 1, 3, 'https://images.unsplash.com/photo-1485550409059-9afb054cada4?q=80&w=2598&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'))
+products.push(new Product('Термопринтер Котик Жовтий', false, 1099, 699, 100, 1, 'Термопринтер Жовтий', 'https://content.rozetka.com.ua/goods/images/big/412348772.jpg'))
+products.push(new Product('Термопринтер Котик Блакитний', false, 1099, 799, 100, 1, 'Термопринтер Блакитний', 'https://content.rozetka.com.ua/goods/images/big/414277845.jpg'))
+products.push(new Product('Термопринтер Котик Рожевий', true, 1099, 799, 100, 1, 'Термопринтер Рожевий', 'https://content2.rozetka.com.ua/goods/images/big/414277383.jpg'))
+products.push(new Product('Термопапір звичайний 1шт', true, 120, 59, 100, 1, 'Термопапір звичайний', 'https://content.rozetka.com.ua/goods/images/big/414357309.jpg'))
+products.push(new Product('Термопапір клейкий 1шт', true, 139, 69, 100, 1, 'Термопапір клейкий', 'https://content.rozetka.com.ua/goods/images/big/414357309.jpg'))
+products.push(new Product('Термопапір колір 1 уп.', true, 210, 159, 100, 1, 'Термопапір кольоровий', 'https://content.rozetka.com.ua/goods/images/big/413967367.jpg'))
 
 
 

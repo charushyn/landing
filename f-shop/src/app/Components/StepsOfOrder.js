@@ -5,13 +5,13 @@ export default function StepsOrder(){
             <ul class='border-l-2 border-gray-400 flex flex-col gap-4 tablet-m:gap-8 tablet-m:mx-[24px]'>
                 <li class="relative flex flex-col pl-6 tablet-l:gap-2">
                     <span class='mobile-s:w-3 mobile-s:h-3 rounded-xl bg-black absolute left-[-6px] top-0 tablet-m:w-[20px] tablet-m:h-[20px] tablet-m:left-[-10px]'></span>
-                    <span class='mobile-s:text-2xl  tablet-m:text-4xl desktop:text-2xl'>Заявка на сайті</span>
-                    <span class='font-thin text-xl  tablet-m:text-3xl desktop:text-2xl text-gray-400'>Залишіть ваш номер телефоному на нашому сайт</span>
+                    <span class='mobile-s:text-2xl  tablet-m:text-4xl desktop:text-2xl'>Оберіть принтер, який спободався Вам</span>
+                    <span class='font-thin text-xl  tablet-m:text-3xl desktop:text-2xl text-gray-400'>Додайте його у кошик, також не забудьте про папір заздалегідь</span>
                 </li>
                 <li class="relative flex flex-col pl-6 tablet-l:gap-2">
                     <span class='mobile-s:w-3 mobile-s:h-3 rounded-xl bg-black absolute left-[-6px] top-2 tablet-m:w-[20px] tablet-m:h-[20px] tablet-m:left-[-10px]'></span>
-                    <span class='text-2xl  tablet-m:text-4xl desktop:text-2xl'>Дзвінок</span>
-                    <span class='font-thin text-xl  tablet-m:text-3xl desktop:text-2xl text-gray-400'>Наш менеджер зв'язується з вами та уточнить деталі замовлення.</span>
+                    <span class='text-2xl  tablet-m:text-4xl desktop:text-2xl'>Заповніть форму</span>
+                    <span class='font-thin text-xl  tablet-m:text-3xl desktop:text-2xl text-gray-400'>Після обранного товару заповніть форму з інформацією для доставки</span>
                 </li>
                 <li class="relative flex flex-col pl-6 tablet-l:gap-2">
                     <span class='mobile-s:w-3 mobile-s:h-3 rounded-xl bg-black absolute left-[-6px] top-2 tablet-m:w-[20px] tablet-m:h-[20px] tablet-m:left-[-10px]'></span>

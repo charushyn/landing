@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Header from "./Components/Header";
 import Greeting from "./Components/Greeting";
@@ -18,7 +19,6 @@ export default function Home() {
       <InfinityString></InfinityString>
       <SecondBlock></SecondBlock>
       <BlockWithInfo></BlockWithInfo>
-      <BlockWithVideo></BlockWithVideo>
       <FAQ></FAQ>
       <StepsOrder></StepsOrder>
       <Products></Products>
