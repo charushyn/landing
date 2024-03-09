@@ -28,7 +28,7 @@ export default function Basket(){
                 <div class=" bg-logo bg-contain bg-center mobile-s:w-10 mobile-s:h-10 tablet-m:w-[70px] tablet-m:h-[70px] tablet-l:h-[80px] tablet-l:w-[80px] desktop:h-[60px] desktop:w-[60px]"></div>
             </div>
             <hr class=''></hr>
-            <p class='mobile-s:text-center mobile-s:text-3xl mt-[12px] mobile-m:text-4xl tablet-l:text-5xl'>Ваш кошик</p>
+            <p class='mobile-s:text-center mobile-s:text-3xl mt-[12px] mobile-m:text-4xl tablet-l:text-4xl'>Ваш кошик</p>
             <div class='flex mobile-s:flex-row gap-4 mt-[30px] mobile-s:flex-wrap mobile-s:mb-6 mobile-s:justify-center mobile-s:px-[16px]'>
             {
                 basketItems.map((item) => {
@@ -36,13 +36,13 @@ export default function Basket(){
                         <div key={item.id} class='flex mobile-s:flex-row bg-white w-full mobile-s:h-fit p-2 mobile-s:gap-2 relative tablet-m:p-4'>
                             <img src={item.urlPhoto} class='mobile-s:h-[90px] mobile-s:w-[90px] mobile-s:object-cover mobile-m:w-[120px] mobile-m:h-[120px] tablet-m:w-[200px] tablet-m:h-[200px] desktop:w-[150px] desktop:h-[150px]'></img>
                             <div class='mobile-s:h-full mobile-s:flex mobile-s:flex-col mobile-s:gap-2 mobile-s:pl-2 mobile-m:gap-10 mobile-l:gap-7 tablet-m:gap-[80px] desktop:gap-8'>
-                                <p class='mobile-s:max-w-[100px] mobile-s:text-xl mobile-l:text-xl mobile-l:max-w-[140px] tablet-m:text-4xl desktop:text-3xl'>{item.name}</p>
+                                <p class='mobile-s:max-w-[100px] mobile-s:text-xl mobile-l:text-xl mobile-l:max-w-[140px] tablet-m:text-4xl desktop:text-2xl'>{item.name}</p>
                                 <p class='mobile-l:text-xl tablet-m:text-3xl desktop:text-2xl'>₴{item.currentPrice}</p>
                             </div>
-                            <div class='flex flex-col items-center gap-1 mobile-s:mt-4 mobile-s:absolute mobile-s:right-3 mobile-m:bottom-6 mobile-s:bottom-2 tablet-m:bottom-9 desktop:top-1'>
-                                <button class='mobile-s:w-[25px] mobile-s:h-[25px] bg-gray-300 rounded-xl mobile-l:w-[30px] mobile-l:h-[30px] mobile-l:text-xl tablet-m:h-[50px] tablet-m:w-[50px] tablet-m:text-4xl tablet-m:rounded-3xl desktop:w-[40px] desktop:h-[40px] desktop:text-2xl' onClick={() => dispatch(incrimentProduct(item))}>+</button>
-                                <span class='tablet-m:text-3xl desktop:text-2xl'>{item.count}</span>
-                                <button class='mobile-s:w-[25px] mobile-s:h-[25px] bg-gray-300 rounded-xl mobile-l:w-[30px] mobile-l:h-[30px] mobile-l:text-xl tablet-m:h-[50px] tablet-m:w-[50px] tablet-m:text-4xl tablet-m:rounded-3xl desktop:w-[40px] desktop:h-[40px] desktop:text-2xl' onClick={() => dispatch(decrementProduct(item))}>-</button>
+                            <div class='flex flex-col items-center gap-1 mobile-s:mt-4 mobile-s:absolute mobile-s:right-3 mobile-m:bottom-6 mobile-s:bottom-2 tablet-m:bottom-9 desktop:top-6'>
+                                <button class='mobile-s:w-[25px] mobile-s:h-[25px] bg-gray-300 rounded-xl mobile-l:w-[30px] mobile-l:h-[30px] mobile-l:text-xl tablet-m:h-[50px] tablet-m:w-[50px] tablet-m:text-4xl tablet-m:rounded-3xl desktop:w-[30px] desktop:h-[30px] desktop:text-xl' onClick={() => dispatch(incrimentProduct(item))}>+</button>
+                                <span class='tablet-m:text-3xl desktop:text-xl'>{item.count}</span>
+                                <button class='mobile-s:w-[25px] mobile-s:h-[25px] bg-gray-300 rounded-xl mobile-l:w-[30px] mobile-l:h-[30px] mobile-l:text-xl tablet-m:h-[50px] tablet-m:w-[50px] tablet-m:text-4xl tablet-m:rounded-3xl desktop:w-[30px] desktop:h-[30px] desktop:text-xl' onClick={() => dispatch(decrementProduct(item))}>-</button>
                             </div>
                         </div>
                     )
@@ -52,30 +52,30 @@ export default function Basket(){
             {
                 totalCost < 1000 && basketItems.length !== 0 ?
                 <div class='mobile-s:flex mobile-s:flex-col text-orange-400 text-right '>
-                    <p class='mobile-l:text-xl tablet-m:text-3xl desktop:px-[16px]'>
+                    <p class='mobile-l:text-xl tablet-m:text-3xl desktop:px-[16px] desktop:text-2xl'>
                         Безкоштовна доставка від 1000₴
                     </p>
-                    <p class='mobile-m:pr-2 mobile-l:text-xl tablet-m:text-3xl mobile-s:px-[16px]'>
+                    <p class='mobile-m:pr-2 mobile-l:text-xl tablet-m:text-3xl mobile-s:px-[16px] desktop:text-2xl'>
                         Не вистачає {1000 - totalCost}₴
                     </p>
                 </div> : ''
             }
             {
                 totalCost > 1000 ?
-                <div class='text-green-700 text-right mobile-l:text-2xl tablet-m:text-3xl mobile-s:px-[16px]'>
+                <div class='text-green-700 text-right mobile-l:text-2xl tablet-m:text-3xl mobile-s:px-[16px] desktop:text-2xl'>
                     Безкоштовна доставка діє!
                 </div> : ''
             }
             {
                 basketItems.length !== 0 ?
-                <div class='mobile-s:text-xl text-right mobile-s:mb-4 mobile-s:mt-2 mobile-l:text-xl tablet-m:text-3xl mobile-s:px-[16px]'>
+                <div class='mobile-s:text-xl text-right mobile-s:mb-4 mobile-s:mt-2 mobile-l:text-xl tablet-m:text-3xl mobile-s:px-[16px] desktop:text-2xl'>
                     Загальна вартість: {totalCost}₴
-                </div> : <div class='mobile-s:text-xl text-center'>Повертайся сюди із товарами!</div>
+                </div> : <div class='mobile-s:text-xl text-center tablet-m:text-3xl'>Повертайся сюди із товарами!</div>
             }
             {
                 basketItems.length !== 0 ?
                 <div class='mobile-s:py-10 w-full relative h-fit tablet-m:mt-10'>
-                    <Link href={'/basket/form'} class=' absolute right-0 bottom-0 mobile-s:right-4'>
+                    <Link href={'/basket/form'} class=' absolute right-0 bottom-0 mobile-s:right-4 desktop:bottom-4'>
                         <Button text={'перейти далі'}></Button>
                     </Link> 
                 </div> : ''

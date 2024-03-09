@@ -10,11 +10,13 @@ import FAQ from "./Components/FAQ";
 import StepsOrder from "./Components/StepsOfOrder";
 import Footer from "./Components/Footer";
 import Products from "./Components/Products";
+import SuccessMessage from "./Components/SuccessMessage";
 
 export default function Home() {
   return (
     <div class=' bg-gray-100 font-productSans'>
       <Header></Header>
+      <SuccessMessage></SuccessMessage>
       <Greeting></Greeting>
       <InfinityString></InfinityString>
       <SecondBlock></SecondBlock>

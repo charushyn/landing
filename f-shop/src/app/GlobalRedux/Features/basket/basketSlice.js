@@ -56,9 +56,14 @@ export const basketSlice = createSlice({
                 return{
                     items: previousBasket
                 }
+        },
+        clearBasket: (state) => {
+            return{
+                items: []
+            }
         }
     }
 })
 
-export const { addProduct, removeProduct, incrimentProduct, decrementProduct } = basketSlice.actions;
+export const { addProduct, removeProduct, incrimentProduct, decrementProduct, clearBasket } = basketSlice.actions;
 export default basketSlice.reducer;

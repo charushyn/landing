@@ -1,5 +1,5 @@
 class Product {
-    constructor(name, isDiscount, previousPrice, currentPrice, amount, count, id, urlPhoto){
+    constructor(name, isDiscount, previousPrice, currentPrice, amount, count, id, urlPhoto, complectation){
         this.name = name;
         this.isDiscount = isDiscount;
         this.previousPrice = previousPrice;
@@ -8,18 +8,19 @@ class Product {
         this.count = count;
         this.id = id;
         this.urlPhoto = urlPhoto;
+        this.complectation = complectation;
 
     }
 }
 
 const products = []
 
-products.push(new Product('Термопринтер Котик Жовтий', false, 1099, 699, 100, 1, 'Термопринтер Жовтий', 'https://content.rozetka.com.ua/goods/images/big/412348772.jpg'))
-products.push(new Product('Термопринтер Котик Блакитний', false, 1099, 799, 100, 1, 'Термопринтер Блакитний', 'https://content.rozetka.com.ua/goods/images/big/414277845.jpg'))
-products.push(new Product('Термопринтер Котик Рожевий', true, 1099, 799, 100, 1, 'Термопринтер Рожевий', 'https://content2.rozetka.com.ua/goods/images/big/414277383.jpg'))
-products.push(new Product('Термопапір звичайний 1шт', true, 120, 59, 100, 1, 'Термопапір звичайний', 'https://content.rozetka.com.ua/goods/images/big/414357309.jpg'))
-products.push(new Product('Термопапір клейкий 1шт', true, 139, 69, 100, 1, 'Термопапір клейкий', 'https://content.rozetka.com.ua/goods/images/big/414357309.jpg'))
-products.push(new Product('Термопапір колір 1 уп.', true, 210, 159, 100, 1, 'Термопапір кольоровий', 'https://content.rozetka.com.ua/goods/images/big/413967367.jpg'))
+products.push(new Product('Термопринтер Котик Жовтий', false, 1099, 699, 100, 1, 'Термопринтер Жовтий', 'https://content.rozetka.com.ua/goods/images/big/412348772.jpg', 'Невероятный  маленький принтер  поможет вам лучше запомнить, записать, передать сообщение, снять снимок, скриншоты. На данном принтере можно печатать любую текстовую или графическую информацию прямо с вашего смартфона через bluetooth соединение.'))
+products.push(new Product('Термопринтер Котик Блакитний', false, 1099, 799, 100, 1, 'Термопринтер Блакитний', 'https://content.rozetka.com.ua/goods/images/big/414277845.jpg', 'Невероятный  маленький принтер  поможет вам лучше запомнить, записать, передать сообщение, снять снимок, скриншоты. На данном принтере можно печатать любую текстовую или графическую информацию прямо с вашего смартфона через bluetooth соединение.'))
+products.push(new Product('Термопринтер Котик Рожевий', true, 1099, 799, 100, 1, 'Термопринтер Рожевий', 'https://content2.rozetka.com.ua/goods/images/big/414277383.jpg', 'Невероятный  маленький принтер  поможет вам лучше запомнить, записать, передать сообщение, снять снимок, скриншоты. На данном принтере можно печатать любую текстовую или графическую информацию прямо с вашего смартфона через bluetooth соединение.'))
+products.push(new Product('Термопапір звичайний 1шт', true, 120, 59, 100, 1, 'Термопапір звичайний', 'https://content.rozetka.com.ua/goods/images/big/414357309.jpg', 'Термобумага без клейкой основы для Bluetooth принтера представляет собой надежный и универсальный расходный материал, специально разработанный для использования с Bluetooth принтерами, такими как принтер. Этот продукт идеально подходит для различных приложений, таких как печать чеков, этикеток, бирок, и других документов, где отсутствие клейкой основы является важным требованием.'))
+products.push(new Product('Термопапір клейкий 1шт', true, 139, 69, 100, 1, 'Термопапір клейкий', 'https://content.rozetka.com.ua/goods/images/big/414357309.jpg', 'Термобумага с клейкой основой для Bluetooth принтера представляет собой надежный и универсальный расходный материал, специально разработанный для использования с Bluetooth принтерами, такими как принтер. Этот продукт идеально подходит для различных приложений, таких как печать чеков, этикеток, бирок, и других документов, где отсутствие клейкой основы является важным требованием.'))
+products.push(new Product('Термопапір колір 1 уп.', true, 210, 159, 100, 1, 'Термопапір кольоровий', 'https://content.rozetka.com.ua/goods/images/big/413967367.jpg', 'Термобумага разноцветная без клейкой основы для Bluetooth принтера представляет собой надежный и универсальный расходный материал, специально разработанный для использования с Bluetooth принтерами, такими как принтер. Этот продукт идеально подходит для различных приложений, таких как печать чеков, этикеток, бирок, и других документов, где отсутствие клейкой основы является важным требованием.'))
 
 
 

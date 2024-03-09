@@ -1,6 +1,12 @@
+'use client'
+
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { clearBasket } from "@/app/GlobalRedux/Features/basket/basketSlice";
 
 export default function Success(){
+
+    const dispatch = useDispatch()
     return(
         <div class='flex flex-col items-center justify-center h-svh mobile-s:px-4 relative'>
             <div class=' flex flex-col items-center'>
@@ -9,7 +15,7 @@ export default function Success(){
                 </svg>
                 <p class='text-center mobile-l:text-2xl tablet-m:text-4xl'>Ваша заявка отримана та передана в обробку!</p>
             </div>
-            <Link href='/' class='bg-purple-600 text-white uppercase mobile-s:px-4 mobile-s:py-3 mobile-l:text-xl mobile-l:px-6 mobile-l:py-3 tablet-m:text-3xl tablet-m:py-7 desktop:py-3 desktop:text-xl absolute mobile-s:bottom-4'>Повернутись до магазину</Link>
+            <Link href='/' class='bg-purple-600 text-white uppercase mobile-s:px-4 mobile-s:py-3 mobile-l:text-xl mobile-l:px-6 mobile-l:py-3 tablet-m:text-3xl tablet-m:py-7 desktop:py-3 desktop:text-xl absolute mobile-s:bottom-4' onClick={() => dispatch(clearBasket())}>Повернутись до магазину</Link>
         </div>
     )
 }
